@@ -35,6 +35,12 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
+        .bitcoin-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f39c12;
+            margin-top: 20px;
+        }
         .brainrot-button {
             position: absolute;
             top: 10px;
@@ -62,8 +68,6 @@
     Bekijk Brain Rot Video
 </button>
 
-</button>
-
 <nav>
     <a href="index.html">Home</a> |
     <a href="geschiedenis.html">Geschiedenis van Bitcoin</a> |
@@ -73,15 +77,36 @@
 <section>
     <h2>Welkom bij de Bitcoin-pagina</h2>
     <p>Bitcoin is een digitale valuta die mensen over de hele wereld gebruiken om betalingen te doen en te investeren. Leer meer over de geschiedenis en technologie erachter door de navigatie te gebruiken.</p>
+
+    <!-- Hier komt de live Bitcoin prijs -->
+    <div class="bitcoin-price" id="bitcoin-price">
+        Bitcoin Prijs: Laden...
+    </div>
 </section>
 
 <footer>
     <p>Meer weten? Bezoek de <a href="https://bitcoin.org/nl/" target="_blank">officiële Bitcoin-website</a>.</p>
 </footer>
 
+<!-- Script om de live Bitcoin prijs te laden -->
+<script>
+    async function fetchBitcoinPrice() {
+        try {
+            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=eur');
+            const data = await response.json();
+            const price = data.bitcoin.eur;
+            document.getElementById('bitcoin-price').innerText = `Bitcoin Prijs: €${price}`;
+        } catch (error) {
+            document.getElementById('bitcoin-price').innerText = 'Kan de prijs niet laden.';
+        }
+    }
+
+    // Haal de prijs op zodra de pagina is geladen
+    window.onload = fetchBitcoinPrice;
+</script>
+
 </body>
 </html>
-<!DOCTYPE html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
