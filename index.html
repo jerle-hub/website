@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Een overzicht van Bitcoin.">
+    <meta name="description" content="Home - Welkom bij Bitcoin Informatie.">
     <title>Bitcoin - Home</title>
     <style>
         body {
@@ -13,45 +13,136 @@
             background-position: center;
             margin: 0;
             padding: 20px;
-            color: #fff; /* Tekst wit voor contrast */
+            color: #fff;
         }
-        header, nav, footer {
+        header, footer {
             background-color: rgba(0, 0, 0, 0.7); /* Doorzichtige achtergrond voor leesbaarheid */
             color: #fff;
             text-align: center;
             padding: 10px;
         }
-        a {
-            color: #f39c12;
-            text-decoration: none;
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center; /* Centraal uitlijnen van tekst */
         }
-        a:hover {
-            text-decoration: underline;
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
         }
-        section {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8); /* Zwarte, doorzichtige achtergrond */
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
-        .bitcoin-price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f39c12;
-            margin-top: 20px;
-        }
-        .brainrot-button {
-            position: absolute;
-            top: 10px;
-            right: 20px;
+        button {
+            padding: 20px 40px; /* Grotere knop */
+            font-size: 24px; /* Grotere tekst */
             background-color: #f39c12;
-            color: #fff;
-            padding: 10px 20px;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 14px;
+            margin-top: 20px; /* Ruimte boven de knop */
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: center; /* Centraal uitlijnen van de knop in de footer */
+            padding: 20px; /* Extra padding voor de footer */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welkom bij Bitcoin Informatie</h1>
+</header>
+
+<div class="center-content">
+    <h1>Hallo Bezoeker!</h1> <!-- Begroeting -->
+    <p>Leer meer over de wereld van digitale valuta en Bitcoin.</p>
+    <button onclick="window.location.href='informatie.html';">Ontdek Meer</button>
+</div>
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informatie over Bitcoin.">
+    <title>Bitcoin - Informatie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('bitcoin-background.jpg'); /* Vervang met je afbeelding */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+        }
+        header, footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Doorzichtige achtergrond voor leesbaarheid */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Witte, doorzichtige achtergrond */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        .slit-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .slit {
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .slit img {
+            width: 150px; /* Pas de grootte van de afbeelding aan voor uniformiteit */
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .slit-content {
+            flex: 1;
+            padding-left: 1cm; /* Ruimte van 1 cm tussen tekst en rand */
+        }
+        .slit h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #333;
+        }
+        .slit p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .brainrot-button {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         .brainrot-button:hover {
             background-color: #e67e22;
@@ -61,109 +152,69 @@
 <body>
 
 <header>
-    <h1>Bitcoin</h1>
+    <h1>Informatie over Bitcoin</h1>
 </header>
 
-<button class="brainrot-button" onclick="window.location.href='https://www.youtube.com/watch?v=YOUR_VIDEO_ID';">
-    Bekijk Brain Rot Video
-</button>
-
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="geschiedenis.html">Geschiedenis van Bitcoin</a> |
-    <a href="technologie.html">Blockchain Technologie</a>
-</nav>
-
 <section>
-    <h2>Welkom bij de Bitcoin-pagina</h2>
-    <p>Bitcoin is een digitale valuta die mensen over de hele wereld gebruiken om betalingen te doen en te investeren. Leer meer over de geschiedenis en technologie erachter door de navigatie te gebruiken.</p>
+    <div class="slit-container">
+        <!-- Slit 1: Wat is Bitcoin? -->
+        <div class="slit">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" alt="Bitcoin logo">
+            <div class="slit-content">
+                <h2>Wat is Bitcoin?</h2>
+                <p>Bitcoin is een gedecentraliseerde digitale valuta die mensen wereldwijd gebruiken om betalingen te doen zonder de tussenkomst van banken. Het netwerk is gebaseerd op peer-to-peer-technologie, wat betekent dat transacties direct tussen gebruikers worden uitgevoerd.</p>
+                <p>Voor meer informatie, bezoek de <a href="https://bitcoin.org" style="color: #f39c12; text-decoration: underline;">officiële Bitcoin-website</a>.</p> <!-- Link naar de officiële Bitcoin-website -->
+            </div>
+        </div>
+        
+        <!-- Slit 2: Blockchain Technologie -->
+        <div class="slit">
+            <div class="slit-content">
+                <h2>Hoe werkt Blockchain?</h2>
+                <p>Blockchain is een technologie die transacties vastlegt in een beveiligde en gedecentraliseerde database. Het netwerk is onveranderlijk en transparant, waardoor het moeilijk is om het te manipuleren. Dit maakt Bitcoin veilig en betrouwbaar.</p>
+            </div>
+        </div>
 
-    <!-- Hier komt de live Bitcoin prijs -->
-    <div class="bitcoin-price" id="bitcoin-price">
-        Bitcoin Prijs: Laden...
+        <!-- Slit 3: Geschiedenis van Bitcoin -->
+        <div class="slit">
+            <div class="slit-content">
+                <h2>Geschiedenis van Bitcoin</h2>
+                <p>In 2009 werd Bitcoin geïntroduceerd door een anonieme persoon of groep bekend als Satoshi Nakamoto. Het doel was om een gedecentraliseerd betalingssysteem te creëren zonder afhankelijk te zijn van financiële instellingen.</p>
+            </div>
+        </div>
+        
+        <!-- Slit 4: Voordelen van Bitcoin -->
+        <div class="slit">
+            <div class="slit-content">
+                <h2>Voordelen van Bitcoin</h2>
+                <p>Bitcoin biedt verschillende voordelen, zoals lage transactiekosten, snelle internationale betalingen, en de mogelijkheid om anoniem te transacteren. Dit maakt het aantrekkelijk voor gebruikers wereldwijd.</p>
+            </div>
+        </div>
+
+        <!-- Slit 5: Risico's van Bitcoin -->
+        <div class="slit">
+            <div class="slit-content">
+                <h2>Risico's van Bitcoin</h2>
+                <p>Ondanks de voordelen zijn er ook risico's verbonden aan Bitcoin, zoals prijsvolatiliteit, mogelijke hacks en juridische onzekerheden. Het is belangrijk om goed geïnformeerd te zijn voordat je investeert.</p>
+            </div>
+        </div>
+
+        <!-- Slit 6: Toekomst van Bitcoin -->
+        <div class="slit">
+            <div class="slit-content">
+                <h2>Toekomst van Bitcoin</h2>
+                <p>De toekomst van Bitcoin lijkt veelbelovend, met steeds meer bedrijven en instellingen die de technologie omarmen. Het kan een belangrijke rol spelen in de financiële sector, maar de regulering blijft een uitdaging.</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>Meer weten? Bezoek de <a href="https://bitcoin.org/nl/" target="_blank">officiële Bitcoin-website</a>.</p>
-</footer>
-
-<!-- Script om de live Bitcoin prijs te laden -->
-<script>
-    async function fetchBitcoinPrice() {
-        try {
-            const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=eur');
-            const data = await response.json();
-            const price = data.bitcoin.eur;
-            document.getElementById('bitcoin-price').innerText = `Bitcoin Prijs: €${price}`;
-        } catch (error) {
-            document.getElementById('bitcoin-price').innerText = 'Kan de prijs niet laden.';
-        }
-    }
-
-    // Haal de prijs op zodra de pagina is geladen
-    window.onload = fetchBitcoinPrice;
-</script>
-
-</body>
-</html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="De geschiedenis van Bitcoin.">
-    <title>Bitcoin - Geschiedenis</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('bitcoin-background.jpg'); /* Vervang met je afbeelding */
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-            padding: 20px;
-            color: #fff;
-        }
-        header, nav, footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-        }
-        a {
-            color: #f39c12;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        section {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Geschiedenis van Bitcoin</h1>
-</header>
-
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="geschiedenis.html">Geschiedenis van Bitcoin</a> |
-    <a href="technologie.html">Blockchain Technologie</a>
-</nav>
-
-<section>
-    <h2>Ontstaan van Bitcoin</h2>
-    <p>Bitcoin werd gecreëerd in 2009 door een anonieme persoon of groep onder het pseudoniem Satoshi Nakamoto. Het doel was om een gedecentraliseerd betalingssysteem te ontwikkelen zonder tussenkomst van banken of overheden.</p>
-</section>
-
-<footer>
-    <p>Meer weten? Bezoek de <a href="https://bitcoin.org/nl/" target="_blank">officiële Bitcoin-website</a>.</p>
+    <div class="footer-content"> <!-- Nieuwe div voor footer-inhoud -->
+        <button class="brainrot-button" onclick="window.location.href='video.html';"> <!-- Link naar de video pagina -->
+            Veel Stress? Klik Hier
+        </button>
+    </div>
 </footer>
 
 </body>
@@ -173,61 +224,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="De blockchain-technologie achter Bitcoin.">
-    <title>Bitcoin - Blockchain Technologie</title>
+    <meta name="description" content="Video over Stress.">
+    <title>Veel Stress? Video</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('bitcoin-background.jpg'); /* Vervang met je afbeelding */
-            background-size: cover;
-            background-position: center;
-            margin: 0;
-            padding: 20px;
-            color: #fff;
-        }
-        header, nav, footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
+            background-color: #282c34;
+            color: white;
             text-align: center;
-            padding: 10px;
-        }
-        a {
-            color: #f39c12;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        section {
-            margin-top: 20px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e67e22;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Blockchain Technologie</h1>
-</header>
+<h1>Veel Stress? Kijk deze Video!</h1>
+<iframe src="https://www.youtube.com/embed/tHRm22e2kyc" allowfullscreen></iframe>
 
-<nav>
-    <a href="index.html">Home</a> |
-    <a href="geschiedenis.html">Geschiedenis van Bitcoin</a> |
-    <a href="technologie.html">Blockchain Technologie</a>
-</nav>
-
-<section>
-    <h2>Hoe werkt Blockchain?</h2>
-    <p>Blockchain is een gedecentraliseerde technologie die transacties opslaat in een keten van blokken. Deze blokken zijn veilig en transparant, en maken Bitcoin transacties betrouwbaar zonder tussenkomst van een centrale instantie.</p>
-</section>
-
-<footer>
-    <p>Meer weten? Bezoek de <a href="https://bitcoin.org/nl/" target="_blank">officiële Bitcoin-website</a>.</p>
-</footer>
+<button onclick="window.history.back();">Terug naar de Hoofdpagina</button>
 
 </body>
 </html>
-<!DOCTYPE html>
